@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "609566280344",
+    "project_id": "dollar-tree-8508b",
+    "storage_bucket": "dollar-tree-8508b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:609566280344:android:9b268318f57b32fbed5eed",
+        "android_client_info": {
+          "package_name": "com.example.dollar_tree"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "609566280344-35skohofa9flqeu3p6it89fs12uo7u29.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTJu3WvrrTe0hT4cLfZVhWLWRA0jTVOGE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "609566280344-35skohofa9flqeu3p6it89fs12uo7u29.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

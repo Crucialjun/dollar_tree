@@ -1,4 +1,4 @@
-import 'package:dollar_tree/features/splash/screens/splash_screen.dart';
+import 'package:dollar_tree/features/auth/screens/welcome_screen.dart';
 import 'package:dollar_tree/firebase_options.dart';
 import 'package:dollar_tree/router.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       onGenerateRoute: (settings) => generateRoute(settings),
-      home: const SplashScreen(),
+      home: const WelcomeScreen(),
     );
   }
 }

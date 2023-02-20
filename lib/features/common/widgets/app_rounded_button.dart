@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class AppRoundedButton extends StatelessWidget {
   final String text;
-  final Function onPressed;
+  final VoidCallback onPressed;
   final Color color;
   final Color foregroundColor;
 
@@ -24,7 +24,7 @@ class AppRoundedButton extends StatelessWidget {
         child: TextButton(
           style: TextButton.styleFrom(
               backgroundColor: color, foregroundColor: foregroundColor),
-          onPressed: () {},
+          onPressed: onPressed,
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 10),
             child: Text(text),

@@ -13,59 +13,62 @@ class SigninScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
-          child: SingleChildScrollView(
-        child: AuthScreensBackground(
-          body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-            const Text(
-              "LOGIN",
-              style: TextStyle(fontWeight: FontWeight.bold),
-            ),
-            SizedBox(
-              height: size.height * 0.03,
-            ),
-            SvgPicture.asset(
-              "assets/svgs/login.svg",
-              height: size.height * 0.4,
-            ),
-            const RoundedTextInput(
-                hintText: "Enter your Email", icon: Icons.person),
-            const RoundedTextInput(
-              obscureText: true,
-              hintText: "Enter your Password",
-              icon: Icons.lock,
-              suffixIcon: Icons.visibility,
-            ),
-            const SizedBox(
-              height: 8,
-            ),
-            AppRoundedButton(
-              text: "LOGIN",
-              onPressed: () {},
-            ),
-            const SizedBox(
-              height: 16,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Text(
-                  "Dont have an account ? ",
-                  style: TextStyle(color: kPrimaryColor),
-                ),
-                InkWell(
-                  onTap: () {},
-                  child: const Text(
-                    "Sign UP",
-                    style: TextStyle(
-                        color: kPrimaryColor, fontWeight: FontWeight.bold),
+        child: SingleChildScrollView(
+          child: AuthScreensBackground(
+            body:
+                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+              const Text(
+                "LOGIN",
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              SizedBox(
+                height: size.height * 0.03,
+              ),
+              SvgPicture.asset(
+                "assets/svgs/login.svg",
+                height: size.height * 0.4,
+              ),
+              const RoundedTextInput(
+                  hintText: "Enter your Email", icon: Icons.person),
+              const RoundedTextInput(
+                obscureText: true,
+                hintText: "Enter your Password",
+                icon: Icons.lock,
+                suffixIcon: Icons.visibility,
+              ),
+              const SizedBox(
+                height: 8,
+              ),
+              AppRoundedButton(
+                text: "LOGIN",
+                onPressed: () {},
+              ),
+              const SizedBox(
+                height: 16,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text(
+                    "Dont have an account ? ",
+                    style: TextStyle(color: kPrimaryColor),
                   ),
-                )
-              ],
-            )
-          ]),
+                  InkWell(
+                    onTap: () {},
+                    child: const Text(
+                      "Sign UP",
+                      style: TextStyle(
+                          color: kPrimaryColor, fontWeight: FontWeight.bold),
+                    ),
+                  )
+                ],
+              )
+            ]),
+          ),
         ),
-      )),
+      ),
     );
   }
 }

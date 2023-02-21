@@ -1,5 +1,6 @@
 import 'package:dollar_tree/constants.dart';
 import 'package:dollar_tree/features/auth/screens/sign_in_screen.dart';
+import 'package:dollar_tree/features/auth/screens/sign_up_screen.dart';
 import 'package:dollar_tree/features/auth/widgets/auth_screens_background.dart';
 import 'package:dollar_tree/features/common/widgets/app_rounded_button.dart';
 import 'package:flutter/material.dart';
@@ -53,7 +54,9 @@ class WelcomeScreen extends StatelessWidget {
                 color: kPrimaryLightColor,
                 foregroundColor: Colors.black,
                 text: "SIGNUP",
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, SignupScreen.routeName);
+                },
               )
             ],
           ),

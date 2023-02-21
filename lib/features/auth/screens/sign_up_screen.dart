@@ -1,4 +1,5 @@
 import 'package:dollar_tree/constants.dart';
+import 'package:dollar_tree/features/auth/screens/sign_in_screen.dart';
 import 'package:dollar_tree/features/auth/widgets/auth_screens_background.dart';
 import 'package:dollar_tree/features/common/widgets/app_rounded_button.dart';
 import 'package:dollar_tree/features/common/widgets/app_rounded_input_field.dart';
@@ -23,17 +24,23 @@ class SignupScreen extends StatelessWidget {
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
               SizedBox(
-                height: size.height * 0.03,
+                height: size.height * 0.02,
               ),
               SvgPicture.asset(
                 "assets/svgs/signup.svg",
-                height: size.height * 0.4,
+                height: size.height * 0.3,
               ),
               const RoundedTextInput(
                   hintText: "Enter your Email", icon: Icons.person),
               const RoundedTextInput(
                 obscureText: true,
                 hintText: "Enter your Password",
+                icon: Icons.lock,
+                suffixIcon: Icons.visibility,
+              ),
+              const RoundedTextInput(
+                obscureText: true,
+                hintText: "Re-Enter your Password",
                 icon: Icons.lock,
                 suffixIcon: Icons.visibility,
               ),
@@ -55,7 +62,9 @@ class SignupScreen extends StatelessWidget {
                     style: TextStyle(color: kPrimaryColor),
                   ),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushNamed(context, SigninScreen.routeName);
+                    },
                     child: const Text(
                       "Sign in",
                       style: TextStyle(

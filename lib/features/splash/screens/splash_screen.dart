@@ -1,11 +1,23 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:dollar_tree/features/auth/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:lottie/lottie.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
   static const String routeName = "splash_screen";
   const SplashScreen({super.key});
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    loadTimer();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -42,5 +54,11 @@ class SplashScreen extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  void loadTimer() async {
+    Future.delayed(const Duration(seconds: 3), () {
+      Navigator.pushReplacementNamed(context, WelcomeScreen.routeName);
+    });
   }
 }

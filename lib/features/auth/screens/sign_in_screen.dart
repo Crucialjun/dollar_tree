@@ -1,4 +1,5 @@
 import 'package:dollar_tree/constants.dart';
+import 'package:dollar_tree/features/auth/screens/sign_up_screen.dart';
 import 'package:dollar_tree/features/auth/widgets/auth_screens_background.dart';
 import 'package:dollar_tree/features/common/widgets/app_rounded_button.dart';
 import 'package:dollar_tree/features/common/widgets/app_rounded_input_field.dart';
@@ -56,7 +57,9 @@ class SigninScreen extends StatelessWidget {
                     style: TextStyle(color: kPrimaryColor),
                   ),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushNamed(context, SignupScreen.routeName);
+                    },
                     child: const Text(
                       "Sign UP",
                       style: TextStyle(

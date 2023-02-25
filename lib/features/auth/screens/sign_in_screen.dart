@@ -3,6 +3,7 @@ import 'package:dollar_tree/features/auth/screens/sign_up_screen.dart';
 import 'package:dollar_tree/features/auth/widgets/auth_screens_background.dart';
 import 'package:dollar_tree/features/common/widgets/app_rounded_button.dart';
 import 'package:dollar_tree/features/common/widgets/app_rounded_input_field.dart';
+import 'package:dollar_tree/features/dashboard/screens/dashboard_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -44,7 +45,9 @@ class SigninScreen extends StatelessWidget {
               ),
               AppRoundedButton(
                 text: "LOGIN",
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, DashboardScreen.routeName);
+                },
               ),
               const SizedBox(
                 height: 16,
